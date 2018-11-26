@@ -209,6 +209,9 @@
                                 <state key="normal" title="ليس لديك حساب؟ سجل هنا">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountBtnPressed:" destination="iVY-wr-Qi9" eventType="touchUpInside" id="RWu-pN-wFJ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="xom-Y1-MYl">
                                 <rect key="frame" x="62.5" y="160" width="250" height="80"/>
@@ -257,12 +260,12 @@
                                     <constraint firstAttribute="height" constant="50" id="Oih-6T-pVY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="تسجيل الدخول">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2m-79-S8i">
-                                <rect key="frame" x="16" y="40" width="29" height="28"/>
+                                <rect key="frame" x="16" y="28" width="29" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="pEv-hi-KAw"/>
                                     <constraint firstAttribute="width" constant="29" id="r26-tl-rct"/>
@@ -276,7 +279,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="716-6U-IgI" firstAttribute="centerX" secondItem="uZH-Nr-62V" secondAttribute="centerX" id="3q0-dB-MUV"/>
-                            <constraint firstItem="l2m-79-S8i" firstAttribute="leading" secondItem="hcX-ML-EmT" secondAttribute="leading" constant="16" id="CbM-bN-QgY"/>
+                            <constraint firstItem="l2m-79-S8i" firstAttribute="leading" secondItem="hcX-ML-EmT" secondAttribute="leading" constant="16" id="HRw-Po-QZn"/>
+                            <constraint firstItem="l2m-79-S8i" firstAttribute="top" secondItem="hcX-ML-EmT" secondAttribute="top" constant="8" id="INi-YL-ro9"/>
                             <constraint firstItem="Cqa-AQ-i5Q" firstAttribute="centerX" secondItem="uZH-Nr-62V" secondAttribute="centerX" id="OrU-LO-SJD"/>
                             <constraint firstItem="716-6U-IgI" firstAttribute="top" secondItem="Cqa-AQ-i5Q" secondAttribute="bottom" id="Rf9-FD-T6x"/>
                             <constraint firstItem="xom-Y1-MYl" firstAttribute="centerX" secondItem="uZH-Nr-62V" secondAttribute="centerX" id="WSS-4R-xav"/>
@@ -284,14 +288,170 @@
                             <constraint firstItem="3WM-EQ-Lb3" firstAttribute="centerX" secondItem="uZH-Nr-62V" secondAttribute="centerX" id="qSQ-aF-y6Z"/>
                             <constraint firstItem="Cqa-AQ-i5Q" firstAttribute="top" secondItem="xom-Y1-MYl" secondAttribute="bottom" constant="40" id="rTo-g6-Zg1"/>
                             <constraint firstItem="3WM-EQ-Lb3" firstAttribute="top" secondItem="hcX-ML-EmT" secondAttribute="top" constant="60" id="ucC-Vf-fDw"/>
-                            <constraint firstItem="l2m-79-S8i" firstAttribute="top" secondItem="hcX-ML-EmT" secondAttribute="top" constant="20" id="yHY-5b-xIM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hcX-ML-EmT"/>
                     </view>
+                    <connections>
+                        <segue destination="I6a-pp-Qn5" kind="show" identifier="toCreateAccount" id="Zei-Ta-cwP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ths-4T-jul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1879.2" y="-268.51574212893553"/>
+        </scene>
+        <!--Create AccountVC-->
+        <scene sceneID="069-HZ-5rL">
+            <objects>
+                <viewController id="I6a-pp-Qn5" customClass="CreateAccountVC" customModule="metraApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eig-I2-sLB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إنشاء حساب جديد" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyd-Om-QJ5">
+                                <rect key="frame" x="112.5" y="60" width="150" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2p-Pk-g6l">
+                                <rect key="frame" x="16" y="28" width="29" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="YGx-GM-G49"/>
+                                    <constraint firstAttribute="width" constant="29" id="b2E-AT-718"/>
+                                </constraints>
+                                <state key="normal" image="closeButton"/>
+                                <connections>
+                                    <action selector="clodePressed:" destination="iVY-wr-Qi9" eventType="touchUpInside" id="kMu-nU-F83"/>
+                                    <action selector="closePressed:" destination="I6a-pp-Qn5" eventType="touchUpInside" id="pXj-jl-jRN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9G5-aa-yoY">
+                                <rect key="frame" x="137.5" y="291" width="100" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="x3K-Ha-uxz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="صورة لحسابك">
+                                    <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccountBtnPressed:" destination="iVY-wr-Qi9" eventType="touchUpInside" id="pdk-qk-Rea"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="iVH-gH-8Y1">
+                                <rect key="frame" x="62.5" y="124" width="250" height="127"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اسم المستخدم" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yIm-iT-JB3">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="ReQ-yK-tbu"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLx-VV-fDV">
+                                        <rect key="frame" x="0.0" y="31" width="250" height="2"/>
+                                        <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="5na-Gx-TCx"/>
+                                            <constraint firstAttribute="width" constant="250" id="v8K-ie-L63"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="البريد الالكتروني" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lti-k8-4fQ">
+                                        <rect key="frame" x="0.0" y="47" width="250" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="j5w-ue-DIP"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVq-sk-TOm">
+                                        <rect key="frame" x="0.0" y="78" width="250" height="2"/>
+                                        <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="ADK-Wy-dHe"/>
+                                            <constraint firstAttribute="height" constant="2" id="Euy-5O-beY"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="كلمة المرور" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FjT-V5-udc">
+                                        <rect key="frame" x="0.0" y="94" width="250" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="IF0-o7-AVT"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0U6-vU-Fvh">
+                                        <rect key="frame" x="0.0" y="125" width="250" height="2"/>
+                                        <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="Krx-wj-RWM"/>
+                                            <constraint firstAttribute="height" constant="2" id="gy1-Xv-UB1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSm-qF-Ahk">
+                                <rect key="frame" x="62.5" y="597" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RqH-TQ-c4Z"/>
+                                    <constraint firstAttribute="width" constant="250" id="fcw-RS-rz4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="حساب جديد">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="faJ-TC-nyT">
+                                <rect key="frame" x="137.5" y="291" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="CKd-UB-qFt"/>
+                                    <constraint firstAttribute="height" constant="100" id="Mxn-L9-HkR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztr-bc-1Pb">
+                                <rect key="frame" x="120.5" y="416" width="134" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="اختر لون خلفية صورتك">
+                                    <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccountBtnPressed:" destination="iVY-wr-Qi9" eventType="touchUpInside" id="zDt-97-kHo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a2p-Pk-g6l" firstAttribute="top" secondItem="ReU-Br-U2f" secondAttribute="top" constant="8" id="1Gl-dr-YLS"/>
+                            <constraint firstItem="qyd-Om-QJ5" firstAttribute="centerX" secondItem="Eig-I2-sLB" secondAttribute="centerX" id="21g-MZ-Y2M"/>
+                            <constraint firstItem="9G5-aa-yoY" firstAttribute="centerX" secondItem="Eig-I2-sLB" secondAttribute="centerX" id="2re-g5-XXb"/>
+                            <constraint firstItem="RSm-qF-Ahk" firstAttribute="centerX" secondItem="Eig-I2-sLB" secondAttribute="centerX" id="634-5g-WXd"/>
+                            <constraint firstItem="qyd-Om-QJ5" firstAttribute="top" secondItem="ReU-Br-U2f" secondAttribute="top" constant="40" id="Fv9-ba-Ute"/>
+                            <constraint firstItem="9G5-aa-yoY" firstAttribute="width" secondItem="faJ-TC-nyT" secondAttribute="width" id="IMg-HJ-MyL"/>
+                            <constraint firstItem="9G5-aa-yoY" firstAttribute="top" secondItem="faJ-TC-nyT" secondAttribute="top" id="PXh-Fy-eou"/>
+                            <constraint firstItem="a2p-Pk-g6l" firstAttribute="leading" secondItem="ReU-Br-U2f" secondAttribute="leading" constant="16" id="Ybm-e8-nUr"/>
+                            <constraint firstItem="faJ-TC-nyT" firstAttribute="top" secondItem="iVH-gH-8Y1" secondAttribute="bottom" constant="40" id="ZmG-ws-RC9"/>
+                            <constraint firstItem="ReU-Br-U2f" firstAttribute="bottom" secondItem="RSm-qF-Ahk" secondAttribute="bottom" constant="20" id="bjl-I8-m7N"/>
+                            <constraint firstItem="iVH-gH-8Y1" firstAttribute="centerX" secondItem="Eig-I2-sLB" secondAttribute="centerX" id="ecu-WY-8KO"/>
+                            <constraint firstItem="iVH-gH-8Y1" firstAttribute="top" secondItem="qyd-Om-QJ5" secondAttribute="bottom" constant="40" id="gkn-c1-KLv"/>
+                            <constraint firstItem="Ztr-bc-1Pb" firstAttribute="top" secondItem="faJ-TC-nyT" secondAttribute="bottom" constant="25" id="on4-dS-E25"/>
+                            <constraint firstItem="Ztr-bc-1Pb" firstAttribute="centerX" secondItem="Eig-I2-sLB" secondAttribute="centerX" id="voi-Xq-BXq"/>
+                            <constraint firstItem="faJ-TC-nyT" firstAttribute="centerX" secondItem="Eig-I2-sLB" secondAttribute="centerX" id="zJt-Zg-gvY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ReU-Br-U2f"/>
+                    </view>
+                    <connections>
+                        <segue destination="CTn-9g-wST" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="4Zj-Vb-xNm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goj-Sv-zJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CTn-9g-wST" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2701.5999999999999" y="-276.61169415292358"/>
         </scene>
     </scenes>
     <resources>
@@ -299,6 +459,7 @@
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="metraLogo" width="1668" height="1228"/>
+        <image name="profileDefault" width="192" height="192"/>
         <image name="smackBurger" width="40" height="40"/>
     </resources>
 </document>
