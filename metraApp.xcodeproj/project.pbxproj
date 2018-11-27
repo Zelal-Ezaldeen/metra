@@ -20,6 +20,7 @@
 		C7987B1821ABE288005D01CD /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7987B1721ABE288005D01CD /* LoginVC.swift */; };
 		C7987B1A21ABE67D005D01CD /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7987B1921ABE67D005D01CD /* CreateAccountVC.swift */; };
 		C7A61EA521AD59ED00763D63 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A61EA421AD59ED00763D63 /* AuthService.swift */; };
+		C7A61EA721ADC47500763D63 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A61EA621ADC47500763D63 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		C7987B1721ABE288005D01CD /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C7987B1921ABE67D005D01CD /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		C7A61EA421AD59ED00763D63 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C7A61EA621ADC47500763D63 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		D6E0134E8540A28883038EF4 /* Pods_metraApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metraApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				C7987B1221AAA16B005D01CD /* GradientView.swift */,
+				C7A61EA621ADC47500763D63 /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7987B1121AA9B1C005D01CD /* ChannelVC.swift in Sources */,
+				C7A61EA721ADC47500763D63 /* RoundedButton.swift in Sources */,
 				C7987B0F21AA9B0A005D01CD /* ChatVC.swift in Sources */,
 				C7987B1A21ABE67D005D01CD /* CreateAccountVC.swift in Sources */,
 				C7A61EA521AD59ED00763D63 /* AuthService.swift in Sources */,
