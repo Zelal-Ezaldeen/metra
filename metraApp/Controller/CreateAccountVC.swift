@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CreateAccountVC: UIViewController {
 
     @IBOutlet weak var usernameTxt: UITextField!
@@ -37,7 +38,6 @@ class CreateAccountVC: UIViewController {
         guard let password = passwordTxt.text, passwordTxt.text != "" else { return }
     
         AuthService.instance.registerUser(email: email, password: password) { (success) in
-            
             if success {
                 AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
                     if success {

@@ -19,9 +19,11 @@ let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"
 
 // Headers
-let HEADER = [
+/*let HEADER = [
     "Content-Type": "application/json; charset=utf-8"
-]
+]*/
+let HEADER = ["Content-Type": "application/json",
+              "accept": "application/json"]
 
 
 // Segues

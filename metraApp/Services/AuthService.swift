@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import Firebase
+
 class AuthService {
     
     static let instance = AuthService()
@@ -56,6 +58,7 @@ class AuthService {
         Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response) in
             
             if response.result.error == nil {
+                
                 completion(true)
             } else {
                 completion(false)
@@ -66,7 +69,6 @@ class AuthService {
     
     func loginUser(email: String, password: String, completion: @escaping CompletionHandler) {
         let lowerCaseEmail = email.lowercased()
-     
         let body: [String: Any] = [
             "email": lowerCaseEmail,
             "password": password
@@ -79,6 +81,7 @@ class AuthService {
                 if let json = response.result.value as? Dictionary<String, Any> {
                     if let email  = json["user"] as? String {
                         self.userEmail = email
+                        print(self.userEmail)
                     }
                     if let token = json["token"] as? String {
                         self.authToken = token
@@ -119,7 +122,7 @@ class AuthService {
             
         ]
         
-        Alamofire.request(URL_USER_ADD, method: .post, parameters: body).responseString { (response) in
+        Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString { (response) in
             
             if response.result.isSuccess {
                
@@ -158,5 +161,9 @@ class AuthService {
         }
     }
     }
+    
+    //TODO: Set up a new User
+    
+    
 }
 
