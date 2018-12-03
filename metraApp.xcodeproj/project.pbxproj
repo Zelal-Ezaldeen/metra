@@ -12,6 +12,8 @@
 		C704D6C821A9DB5A0075AA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C704D6C621A9DB5A0075AA8B /* Main.storyboard */; };
 		C704D6CA21A9DB5B0075AA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C704D6C921A9DB5B0075AA8B /* Assets.xcassets */; };
 		C704D6CD21A9DB5B0075AA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C704D6CB21A9DB5B0075AA8B /* LaunchScreen.storyboard */; };
+		C75ADDD021B5ACE0002E5C32 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ADDCF21B5ACE0002E5C32 /* AvatarPickerVC.swift */; };
+		C75ADDD221B5B0C2002E5C32 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ADDD121B5B0C2002E5C32 /* AvatarCell.swift */; };
 		C7987B0A21AA9354005D01CD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7987B0921AA9354005D01CD /* SWRevealViewController.m */; };
 		C7987B0F21AA9B0A005D01CD /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7987B0E21AA9B0A005D01CD /* ChatVC.swift */; };
 		C7987B1121AA9B1C005D01CD /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7987B1021AA9B1C005D01CD /* ChannelVC.swift */; };
@@ -34,6 +36,8 @@
 		C704D6C921A9DB5B0075AA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C704D6CC21A9DB5B0075AA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C704D6CE21A9DB5B0075AA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C75ADDCF21B5ACE0002E5C32 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
+		C75ADDD121B5B0C2002E5C32 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		C7987B0721AA9354005D01CD /* metraApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "metraApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C7987B0821AA9354005D01CD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C7987B0921AA9354005D01CD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				C7987B1021AA9B1C005D01CD /* ChannelVC.swift */,
 				C7987B1721ABE288005D01CD /* LoginVC.swift */,
 				C7987B1921ABE67D005D01CD /* CreateAccountVC.swift */,
+				C75ADDCF21B5ACE0002E5C32 /* AvatarPickerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			children = (
 				C7987B1221AAA16B005D01CD /* GradientView.swift */,
 				C7A61EA621ADC47500763D63 /* RoundedButton.swift */,
+				C75ADDD121B5B0C2002E5C32 /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,12 +302,14 @@
 			files = (
 				C7987B1121AA9B1C005D01CD /* ChannelVC.swift in Sources */,
 				C7A61EA721ADC47500763D63 /* RoundedButton.swift in Sources */,
+				C75ADDD021B5ACE0002E5C32 /* AvatarPickerVC.swift in Sources */,
 				C7987B0F21AA9B0A005D01CD /* ChatVC.swift in Sources */,
 				C7B0542021B3F33D0035BD32 /* UserDataService.swift in Sources */,
 				C7987B1A21ABE67D005D01CD /* CreateAccountVC.swift in Sources */,
 				C7A61EA521AD59ED00763D63 /* AuthService.swift in Sources */,
 				C7987B1321AAA16B005D01CD /* GradientView.swift in Sources */,
 				C704D6C321A9DB5A0075AA8B /* AppDelegate.swift in Sources */,
+				C75ADDD221B5B0C2002E5C32 /* AvatarCell.swift in Sources */,
 				C7987B0A21AA9354005D01CD /* SWRevealViewController.m in Sources */,
 				C7987B1621AB2E3F005D01CD /* Constants.swift in Sources */,
 				C7987B1821ABE288005D01CD /* LoginVC.swift in Sources */,

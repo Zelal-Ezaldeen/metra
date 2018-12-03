@@ -41,7 +41,6 @@ class CreateAccountVC: UIViewController {
             if success {
                 AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
                     if success {
-                      //  print("LOGGED in USER", AuthService.instance.authToken)
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColo: self.avatarColor, completion: { (success) in
                             if success {
                                 print(UserDataService.instance.name, UserDataService.instance.avatarName)
@@ -60,6 +59,7 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func pickAvatarPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
     }
     @IBAction func pickBGColorPressed(_ sender: Any) {
     }
