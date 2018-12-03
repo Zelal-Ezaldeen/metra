@@ -8,7 +8,13 @@ target 'metraApp' do
   use_frameworks!
 
   # Pods for metraApp
-pod 'Alamofire'
+pod 'Alamofire', '~> 4.4'
 pod 'SwiftyJSON'
 pod 'Socket.IO-Client-Swift'
+pod 'Firebase'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'SVProgressHUD'
+pod 'ChameleonFramework'
+
 end

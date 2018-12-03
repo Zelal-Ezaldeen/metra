@@ -21,6 +21,8 @@
 		C7987B1A21ABE67D005D01CD /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7987B1921ABE67D005D01CD /* CreateAccountVC.swift */; };
 		C7A61EA521AD59ED00763D63 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A61EA421AD59ED00763D63 /* AuthService.swift */; };
 		C7A61EA721ADC47500763D63 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A61EA621ADC47500763D63 /* RoundedButton.swift */; };
+		C7B0542021B3F33D0035BD32 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B0541F21B3F33D0035BD32 /* UserDataService.swift */; };
+		C7B0542221B4F8A60035BD32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7B0542121B4F8A60035BD32 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		C7987B1921ABE67D005D01CD /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		C7A61EA421AD59ED00763D63 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C7A61EA621ADC47500763D63 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		C7B0541F21B3F33D0035BD32 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		C7B0542121B4F8A60035BD32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6E0134E8540A28883038EF4 /* Pods_metraApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metraApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,6 +103,7 @@
 				C704D6C921A9DB5B0075AA8B /* Assets.xcassets */,
 				C704D6CB21A9DB5B0075AA8B /* LaunchScreen.storyboard */,
 				C704D6CE21A9DB5B0075AA8B /* Info.plist */,
+				C7B0542121B4F8A60035BD32 /* GoogleService-Info.plist */,
 				C7987B0721AA9354005D01CD /* metraApp-Bridging-Header.h */,
 			);
 			path = metraApp;
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				C7A61EA421AD59ED00763D63 /* AuthService.swift */,
+				C7B0541F21B3F33D0035BD32 /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C704D6CD21A9DB5B0075AA8B /* LaunchScreen.storyboard in Resources */,
+				C7B0542221B4F8A60035BD32 /* GoogleService-Info.plist in Resources */,
 				C704D6CA21A9DB5B0075AA8B /* Assets.xcassets in Resources */,
 				C704D6C821A9DB5A0075AA8B /* Main.storyboard in Resources */,
 			);
@@ -252,16 +259,28 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-metraApp/Pods-metraApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -278,6 +297,7 @@
 				C7987B1121AA9B1C005D01CD /* ChannelVC.swift in Sources */,
 				C7A61EA721ADC47500763D63 /* RoundedButton.swift in Sources */,
 				C7987B0F21AA9B0A005D01CD /* ChatVC.swift in Sources */,
+				C7B0542021B3F33D0035BD32 /* UserDataService.swift in Sources */,
 				C7987B1A21ABE67D005D01CD /* CreateAccountVC.swift in Sources */,
 				C7A61EA521AD59ED00763D63 /* AuthService.swift in Sources */,
 				C7987B1321AAA16B005D01CD /* GradientView.swift in Sources */,
