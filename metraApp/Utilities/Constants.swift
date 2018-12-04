@@ -23,7 +23,11 @@ let HEADER = [
     "Content-Type": "application/json; charset=utf-8"
 ]
 
+// Colors
+let metraPurplePlaceholder = #colorLiteral(red: 0.3254901961, green: 0.4196078431, blue: 0.7764705882, alpha: 0.5)
 
+// Notifications Constants
+let NOTIF_USER_DATA_DID_CHANDE = Notification.Name("notifUserDataChanged")
 // Segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
