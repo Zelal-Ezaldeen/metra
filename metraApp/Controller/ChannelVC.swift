@@ -24,6 +24,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataChange(_ :)), name: NOTIF_USER_DATA_DID_CHANDE, object: nil)
         
+        SocketService.instance.getChannel { (success) in
+            if success {
+                self.tableView.reloadData()
+            }
+        }
+        
 
     }
     
