@@ -11,14 +11,14 @@ import Foundation
 typealias CompletionHandler =  (_ Success: Bool) -> ()
 
 // URL Constants
-let BASE_URL = "https://chattychatjb.herokuapp.com/v1/" // Work
-
-//let BASE_URL = "https://chatmetra.herokuapp.com/v1/" // Not Working
+let BASE_URL = "https://chattychatjb.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"
 let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 let URL_GET_CHANNELS = "\(BASE_URL)channel/"
+let URL_GET_MESSAGES = "\(BASE_URL)message/byChannel/"
+
 
 
 // Headers
@@ -36,6 +36,8 @@ let metraPurplePlaceholder = #colorLiteral(red: 0.3254901961, green: 0.419607843
 
 // Notifications Constants
 let NOTIF_USER_DATA_DID_CHANDE = Notification.Name("notifUserDataChanged")
+let NOTIF_CHANNELS_LOADED = Notification.Name("channelsLoaded")
+let NOTIF_CHANNELS_SLECTED = Notification.Name("channelSelected")
 // Segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
