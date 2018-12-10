@@ -72,8 +72,11 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="messageBoxEditing:" destination="3mY-di-jgf" eventType="editingChanged" id="SqT-mu-SMN"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dj0-ca-CHj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dj0-ca-CHj" userLabel="Send Btn">
                                 <rect key="frame" x="337" y="632" width="30" height="30"/>
                                 <state key="normal" image="send"/>
                                 <connections>
@@ -161,6 +164,7 @@
                         <outlet property="channelNameLbl" destination="7KF-8q-cNN" id="yzi-H5-jLE"/>
                         <outlet property="menuBtn" destination="qza-cO-dAO" id="3lh-tg-YPX"/>
                         <outlet property="messageTxtBox" destination="0O3-75-7QD" id="vgg-Ff-QTS"/>
+                        <outlet property="sendBtn" destination="dj0-ca-CHj" id="7xc-XA-KTI"/>
                         <outlet property="tableView" destination="4Lb-Qz-kOI" id="rya-81-2Jc"/>
                     </connections>
                 </viewController>
