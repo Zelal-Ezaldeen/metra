@@ -51,7 +51,8 @@ class MessageService {
             if response.result.error == nil {
                 self.clearMessages()
                 guard let data = response.data else { return }
-                if let json = try! JSON(data: data).array {
+                do {
+                if let json = try JSON(data: data).array {
                   
                     for item in json {
                         let messageBody = item["messageBody"].stringValue
@@ -66,11 +67,12 @@ class MessageService {
                         self.messages.append(message)
                      
                     }
-                    print(self.messages)
                     completion(true)
                 }
                 
-                
+                } catch let error {
+                    print(error.localizedDescription)
+                }
                 
             } else {
                
