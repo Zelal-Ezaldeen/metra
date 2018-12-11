@@ -329,7 +329,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="xom-Y1-MYl">
                                 <rect key="frame" x="62.5" y="160" width="250" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اسم المستخدم" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0mj-9M-Sdy">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="البريد الالكتروني" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0mj-9M-Sdy">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="ZAF-zs-xWy"/>

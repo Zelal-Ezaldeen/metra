@@ -16,49 +16,59 @@ class AuthService {
     static let instance = AuthService()
     
     let defaults = UserDefaults.standard
-    
+   
+
     var isLoggedIn : Bool {
         get {
+            
             return defaults.bool(forKey: LOGGED_IN_KEY)
         }
         set {
             defaults.set(newValue, forKey: LOGGED_IN_KEY)
+          
         }
     }
     
     var authToken: String {
         get  {
-        return defaults.value(forKey: TOKEN_KEY) as! String
+           return defaults.value(forKey: TOKEN_KEY) as! String
     }
         set {
             defaults.set(newValue, forKey: TOKEN_KEY)
         }
-    
 }
-
+//    var authToken: String {
+//        get {
+//            return defaults.value(forKey: TOKEN_KEY) as? String ?? ""
+//        }
+//        set {
+//            defaults.set(newValue, forKey: TOKEN_KEY)
+//        }
+//    }
     var userEmail: String {
+
         get  {
             return defaults.value(forKey: USER_EMAIL) as! String
+
         }
         set {
             defaults.set(newValue, forKey: USER_EMAIL)
         }
 }
     
+
     func registerUser(email: String, password: String, completion: @escaping CompletionHandler) {
         
         let lowerCaseEmail = email.lowercased()
-        
-      
+     
         let body: [String: Any] = [
             "email": lowerCaseEmail,
             "password": password
         ]
         
-        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response) in
+        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
             
             if response.result.error == nil {
-                
                 completion(true)
             } else {
                 completion(false)
@@ -80,9 +90,10 @@ class AuthService {
                 guard let data = response.data else { return }
                 do {
                 let json = try JSON(data: data)
+                    print(json)
                             self.userEmail = json["user"].stringValue
                             self.authToken = json["token"].stringValue
-             
+             print(json)
                 // Another way to request
                 /*if let json = response.result.value as? Dictionary<String, Any> {
                     if let email  = json["user"] as? String {
@@ -161,6 +172,8 @@ class AuthService {
                 let avatarName = json["avatarName"].stringValue
                 let email = json["email"].stringValue
                 let name = json["name"].stringValue
+            print("HERE ADD USER")
+            print(json)
                 UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
         } catch let error {
             print(error.localizedDescription)

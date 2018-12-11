@@ -19,7 +19,6 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         setUpView()
 
-       
     }
   
     @IBAction func loginPressed(_ sender: Any) {
@@ -33,7 +32,7 @@ class LoginVC: UIViewController {
             if success {
                 AuthService.instance.findUserByEmail(completion: { (success) in
                     if success {
-                        NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANDE, object: nil  )
+                    NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANDE, object: nil)
                         self.spinner.isHidden = true
                         self.spinner.stopAnimating()
                         self.dismiss(animated: true, completion: nil)
@@ -55,7 +54,7 @@ class LoginVC: UIViewController {
  
     func setUpView() {
          spinner.isHidden = true
-        usernameTxt.attributedPlaceholder = NSAttributedString(string: "اسم المستخدم", attributes: [NSAttributedString.Key.foregroundColor : metraPurplePlaceholder])
+        usernameTxt.attributedPlaceholder = NSAttributedString(string: "البريد الالكتروني", attributes: [NSAttributedString.Key.foregroundColor : metraPurplePlaceholder])
      
         passwordTxt.attributedPlaceholder = NSAttributedString(string: "كلمة المرور", attributes: [NSAttributedString.Key.foregroundColor : metraPurplePlaceholder])
         

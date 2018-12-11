@@ -24,8 +24,9 @@ class MessageService {
             
             if response.result.error == nil {
                 guard let data = response.data else { return }
-               if let json = try! JSON(data: data).array {
-                
+              
+                do {
+                     if let json = try! JSON(data: data).array {
                     for item in json {
                         let name = item["name"].stringValue
                         let channelDescription = item["description"].stringValue
@@ -33,10 +34,14 @@ class MessageService {
                         let channel = Channel(channelTitle: name, channelDescription: channelDescription, id: id)
                         self.channels.append(channel)
                     }
-                
+                }
+                    
+                } catch {
+                    print(error)
+                }
                 NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
                     completion(true)
-            }
+         
        
             } else {
                 completion(false)
