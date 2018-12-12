@@ -20,13 +20,13 @@ class MessageService {
     var selectedChannel : Channel?
     
     func findAllChannel(completion: @escaping CompletionHandler) {
-        Alamofire.request(URL_GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+        Alamofire.request(URL_GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseString { (response) in
             
             if response.result.error == nil {
                 guard let data = response.data else { return }
               
                 do {
-                     if let json = try! JSON(data: data).array {
+                     if let json = try JSON(data: data).array {
                     for item in json {
                         let name = item["name"].stringValue
                         let channelDescription = item["description"].stringValue
@@ -41,7 +41,6 @@ class MessageService {
                 }
                 NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
                     completion(true)
-         
        
             } else {
                 completion(false)
@@ -52,14 +51,12 @@ class MessageService {
     }
     
     func findAllMessagesForChannel(channelId: String, completion: @escaping CompletionHandler) {
-        Alamofire.request("\(URL_GET_MESSAGES)\(channelId)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
-        print("HI")
+        Alamofire.request("\(URL_GET_MESSAGES)\(channelId)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseString { (response) in
             if response.result.error == nil {
                 self.clearMessages()
                 guard let data = response.data else { return }
                 do {
                 if let json = try JSON(data: data).array {
-                  
                     for item in json {
                         let messageBody = item["messageBody"].stringValue
                         let channelId = item["channelId"].stringValue
