@@ -12,6 +12,9 @@
 		C704D6C821A9DB5A0075AA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C704D6C621A9DB5A0075AA8B /* Main.storyboard */; };
 		C704D6CA21A9DB5B0075AA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C704D6C921A9DB5B0075AA8B /* Assets.xcassets */; };
 		C704D6CD21A9DB5B0075AA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C704D6CB21A9DB5B0075AA8B /* LaunchScreen.storyboard */; };
+		C7230AF521C3810E00A74ACB /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7230AF421C3810E00A74ACB /* DroppablePin.swift */; };
+		C72443A321C4D01400E651E4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72443A221C4D01400E651E4 /* MapKit.framework */; };
+		C72443A521C559E300E651E4 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72443A421C559E300E651E4 /* PhotoCell.swift */; };
 		C73B8CE621B7B1E200AAAC13 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B8CE421B7B1E200AAAC13 /* ProfileVC.swift */; };
 		C73B8CE721B7B1E200AAAC13 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C73B8CE521B7B1E200AAAC13 /* ProfileVC.xib */; };
 		C73B8CEA21B8F0DC00AAAC13 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B8CE921B8F0DC00AAAC13 /* MessageService.swift */; };
@@ -20,6 +23,7 @@
 		C73B8CF321B913D000AAAC13 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B8CF121B913D000AAAC13 /* AddChannelVC.swift */; };
 		C73B8CF421B913D000AAAC13 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C73B8CF221B913D000AAAC13 /* AddChannelVC.xib */; };
 		C73B8CF621B934FD00AAAC13 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B8CF521B934FD00AAAC13 /* SocketService.swift */; };
+		C75555D321C220E000FA35AF /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75555D221C220E000FA35AF /* MapVC.swift */; };
 		C75ADDD021B5ACE0002E5C32 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ADDCF21B5ACE0002E5C32 /* AvatarPickerVC.swift */; };
 		C75ADDD221B5B0C2002E5C32 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ADDD121B5B0C2002E5C32 /* AvatarCell.swift */; };
 		C75ADDD421B65C85002E5C32 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ADDD321B65C85002E5C32 /* CircleImage.swift */; };
@@ -48,6 +52,9 @@
 		C704D6C921A9DB5B0075AA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C704D6CC21A9DB5B0075AA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C704D6CE21A9DB5B0075AA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7230AF421C3810E00A74ACB /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
+		C72443A221C4D01400E651E4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C72443A421C559E300E651E4 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		C73B8CE421B7B1E200AAAC13 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		C73B8CE521B7B1E200AAAC13 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		C73B8CE921B8F0DC00AAAC13 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -56,6 +63,7 @@
 		C73B8CF121B913D000AAAC13 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		C73B8CF221B913D000AAAC13 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		C73B8CF521B934FD00AAAC13 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		C75555D221C220E000FA35AF /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		C75ADDCF21B5ACE0002E5C32 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		C75ADDD121B5B0C2002E5C32 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		C75ADDD321B65C85002E5C32 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
@@ -83,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C72443A321C4D01400E651E4 /* MapKit.framework in Frameworks */,
 				ACC051F8175A1C0F038514B3 /* Pods_metraApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +102,7 @@
 		142B865F5CC0F7B3EEC23E34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C72443A221C4D01400E651E4 /* MapKit.framework */,
 				D6E0134E8540A28883038EF4 /* Pods_metraApp.framework */,
 			);
 			name = Frameworks;
@@ -119,6 +129,7 @@
 		C704D6C121A9DB5A0075AA8B /* metraApp */ = {
 			isa = PBXGroup;
 			children = (
+				C75555D121C220B200FA35AF /* Extensions */,
 				C73B8CE821B7B1F600AAAC13 /* XIBS */,
 				C7A61EA321AD59CC00763D63 /* Services */,
 				C7987B1421AB2E26005D01CD /* Utilities */,
@@ -147,6 +158,13 @@
 			path = XIBS;
 			sourceTree = "<group>";
 		};
+		C75555D121C220B200FA35AF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C7987B0B21AA9AE7005D01CD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +175,7 @@
 				C75ADDCF21B5ACE0002E5C32 /* AvatarPickerVC.swift */,
 				C73B8CE421B7B1E200AAAC13 /* ProfileVC.swift */,
 				C73B8CF121B913D000AAAC13 /* AddChannelVC.swift */,
+				C75555D221C220E000FA35AF /* MapVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,6 +190,8 @@
 				C75ADDD321B65C85002E5C32 /* CircleImage.swift */,
 				C73B8CED21B9076000AAAC13 /* ChannelCell.swift */,
 				C75EFD4C21BD1F52003507D6 /* MessageCell.swift */,
+				C7230AF421C3810E00A74ACB /* DroppablePin.swift */,
+				C72443A421C559E300E651E4 /* PhotoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -247,6 +268,11 @@
 					C704D6BE21A9DB5A0075AA8B = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -309,8 +335,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-metraApp/Pods-metraApp-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-metraApp/Pods-metraApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -324,6 +351,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -336,7 +364,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-metraApp/Pods-metraApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-metraApp/Pods-metraApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -352,6 +380,7 @@
 				C73B8CEE21B9076000AAAC13 /* ChannelCell.swift in Sources */,
 				C7987B1121AA9B1C005D01CD /* ChannelVC.swift in Sources */,
 				C7A61EA721ADC47500763D63 /* RoundedButton.swift in Sources */,
+				C72443A521C559E300E651E4 /* PhotoCell.swift in Sources */,
 				C75EFD4D21BD1F52003507D6 /* MessageCell.swift in Sources */,
 				C75ADDD021B5ACE0002E5C32 /* AvatarPickerVC.swift in Sources */,
 				C75EFD4921BBDACE003507D6 /* Message.swift in Sources */,
@@ -359,9 +388,11 @@
 				C73B8CEA21B8F0DC00AAAC13 /* MessageService.swift in Sources */,
 				C7987B0F21AA9B0A005D01CD /* ChatVC.swift in Sources */,
 				C7B0542021B3F33D0035BD32 /* UserDataService.swift in Sources */,
+				C75555D321C220E000FA35AF /* MapVC.swift in Sources */,
 				C7987B1A21ABE67D005D01CD /* CreateAccountVC.swift in Sources */,
 				C7A61EA521AD59ED00763D63 /* AuthService.swift in Sources */,
 				C73B8CEC21B8F12000AAAC13 /* Channel.swift in Sources */,
+				C7230AF521C3810E00A74ACB /* DroppablePin.swift in Sources */,
 				C7987B1321AAA16B005D01CD /* GradientView.swift in Sources */,
 				C73B8CF321B913D000AAAC13 /* AddChannelVC.swift in Sources */,
 				C704D6C321A9DB5A0075AA8B /* AppDelegate.swift in Sources */,
@@ -519,6 +550,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VTH2QBAX4P;
 				INFOPLIST_FILE = metraApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,6 +573,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VTH2QBAX4P;
 				INFOPLIST_FILE = metraApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

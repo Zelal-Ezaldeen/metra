@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0380032D770D49A27AACDFAA44FD91F0"
+               BlueprintIdentifier = "9F1E4B2E54CC817BEBF0350D3A8C2C08"
                BuildableName = "Pods_metraApp.framework"
                BlueprintName = "Pods-metraApp"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0380032D770D49A27AACDFAA44FD91F0"
+            BlueprintIdentifier = "9F1E4B2E54CC817BEBF0350D3A8C2C08"
             BuildableName = "Pods_metraApp.framework"
             BlueprintName = "Pods-metraApp"
             ReferencedContainer = "container:Pods.xcodeproj">

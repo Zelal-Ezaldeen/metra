@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wr6-Gs-HHj">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -29,16 +29,94 @@
             </objects>
             <point key="canvasLocation" x="260" y="17"/>
         </scene>
+        <!--MapVC-->
+        <scene sceneID="LC9-rZ-6IW">
+            <objects>
+                <viewController id="wr6-Gs-HHj" customClass="MapVC" customModule="metraApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vf7-cy-MRc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihy-ov-uJn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beU-EE-2K2" customClass="GradientView" customModule="metraApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اضغط مرتين هنا لتحديد المكان وإظهار الموقع" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s9-Hv-go2">
+                                        <rect key="frame" x="44.5" y="39.5" width="325" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="T7N-hU-rq4"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="325" id="YVS-un-h2H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.30196078431372547" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9s9-Hv-go2" firstAttribute="centerY" secondItem="beU-EE-2K2" secondAttribute="centerY" id="0al-L9-HK0"/>
+                                    <constraint firstAttribute="height" constant="100" id="HVJ-gS-lYN"/>
+                                    <constraint firstItem="9s9-Hv-go2" firstAttribute="centerX" secondItem="beU-EE-2K2" secondAttribute="centerX" id="jfN-yp-W1a"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgm-hj-obf">
+                                <rect key="frame" x="348" y="792" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Cd0-nl-Sjw"/>
+                                    <constraint firstAttribute="height" constant="50" id="WRB-Oh-e52"/>
+                                </constraints>
+                                <state key="normal" image="location"/>
+                                <connections>
+                                    <action selector="centreMapBtnPressed:" destination="wr6-Gs-HHj" eventType="touchUpInside" id="o9c-Af-cgp"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNH-GU-imP">
+                                <rect key="frame" x="0.0" y="895" width="414" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="JNz-ec-2FC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="beU-EE-2K2" firstAttribute="top" secondItem="Vf7-cy-MRc" secondAttribute="top" id="3H1-4S-NZa"/>
+                            <constraint firstAttribute="trailing" secondItem="cNH-GU-imP" secondAttribute="trailing" id="4Ti-Nu-uxs"/>
+                            <constraint firstItem="Ihy-ov-uJn" firstAttribute="top" secondItem="Vf7-cy-MRc" secondAttribute="top" id="53d-SD-T1p"/>
+                            <constraint firstItem="beU-EE-2K2" firstAttribute="leading" secondItem="Hdt-zD-ZZ9" secondAttribute="leading" id="7jd-Pj-MgX"/>
+                            <constraint firstItem="Ihy-ov-uJn" firstAttribute="leading" secondItem="Hdt-zD-ZZ9" secondAttribute="leading" id="EII-up-WyM"/>
+                            <constraint firstAttribute="bottom" secondItem="cNH-GU-imP" secondAttribute="bottom" id="PPT-92-lN7"/>
+                            <constraint firstItem="Ihy-ov-uJn" firstAttribute="trailing" secondItem="Hdt-zD-ZZ9" secondAttribute="trailing" id="Yri-CZ-hJ8"/>
+                            <constraint firstItem="Hdt-zD-ZZ9" firstAttribute="bottom" secondItem="Rgm-hj-obf" secondAttribute="bottom" constant="20" id="aRx-ex-yGz"/>
+                            <constraint firstItem="Rgm-hj-obf" firstAttribute="trailing" secondItem="Hdt-zD-ZZ9" secondAttribute="trailing" constant="-16" id="gG3-5B-Htk"/>
+                            <constraint firstItem="beU-EE-2K2" firstAttribute="trailing" secondItem="Hdt-zD-ZZ9" secondAttribute="trailing" id="m5z-BS-gmV"/>
+                            <constraint firstAttribute="bottom" secondItem="Ihy-ov-uJn" secondAttribute="bottom" id="pjL-1E-fOa"/>
+                            <constraint firstItem="cNH-GU-imP" firstAttribute="leading" secondItem="Vf7-cy-MRc" secondAttribute="leading" id="tYK-JM-fI0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hdt-zD-ZZ9"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Ihy-ov-uJn" id="5Lo-Wz-NQR"/>
+                        <outlet property="pullUpView" destination="cNH-GU-imP" id="LYD-DD-li5"/>
+                        <outlet property="pullUpViewConstraints" destination="JNz-ec-2FC" id="hr7-lP-XOC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQ5-ag-jsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400.00000000000006" y="1312.5"/>
+        </scene>
         <!--ChatVC-->
         <scene sceneID="QVj-8E-039">
             <objects>
                 <viewController id="3mY-di-jgf" customClass="ChatVC" customModule="metraApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FcG-ng-nc7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJC-kM-Stb" customClass="GradientView" customModule="metraApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                <rect key="frame" x="0.0" y="16" width="414" height="77"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qza-cO-dAO">
                                         <rect key="frame" x="12" y="47" width="24" height="18"/>
@@ -49,7 +127,7 @@
                                         <state key="normal" image="smackBurger"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مترا " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KF-8q-cNN">
-                                        <rect key="frame" x="167.5" y="41" width="40.5" height="30"/>
+                                        <rect key="frame" x="187" y="41" width="40" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -65,7 +143,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رسالة" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0O3-75-7QD">
-                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="822" width="414" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="d8U-8h-fyo"/>
                                 </constraints>
@@ -77,44 +155,44 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dj0-ca-CHj" userLabel="Send Btn">
-                                <rect key="frame" x="337" y="632" width="30" height="30"/>
+                                <rect key="frame" x="376" y="827" width="30" height="30"/>
                                 <state key="normal" image="send"/>
                                 <connections>
                                     <action selector="sendMessagePressed:" destination="3mY-di-jgf" eventType="touchUpInside" id="hi8-nq-Des"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Lb-Qz-kOI">
-                                <rect key="frame" x="0.0" y="77" width="375" height="520"/>
+                                <rect key="frame" x="0.0" y="93" width="414" height="699"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="RPn-yv-O8l" customClass="MessageCell" customModule="metraApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RPn-yv-O8l" id="WEf-fr-vEd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m2R-VI-EA5" customClass="CircleImage" customModule="metraApp" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="11" width="50" height="50"/>
+                                                    <rect key="frame" x="20" y="11" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="WgG-tf-tVo"/>
                                                         <constraint firstAttribute="width" constant="50" id="wGt-W5-iDl"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="محمد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmF-cg-2mZ">
-                                                    <rect key="frame" x="77" y="11" width="38" height="17.5"/>
+                                                    <rect key="frame" x="82" y="11" width="38" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="نص الرسالة" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beZ-mT-PDx">
-                                                    <rect key="frame" x="77" y="36.5" width="271" height="17.5"/>
+                                                    <rect key="frame" x="82" y="36.5" width="300" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If6-9u-K7m">
-                                                    <rect key="frame" x="121" y="10" width="74" height="20"/>
+                                                    <rect key="frame" x="126" y="10" width="74" height="20"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -143,10 +221,10 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZD-hw-3ZB">
-                                <rect key="frame" x="8" y="604.5" width="34.5" height="16.5"/>
+                                <rect key="frame" x="8" y="799.5" width="250" height="16.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16.5" id="6ek-dW-4zs"/>
-                                    <constraint firstAttribute="width" constant="34.5" id="MS4-K1-mIg"/>
+                                    <constraint firstAttribute="width" constant="250" id="MS4-K1-mIg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -168,7 +246,7 @@
                             <constraint firstItem="RJC-kM-Stb" firstAttribute="leading" secondItem="5Qj-uq-zfL" secondAttribute="leading" id="ung-fz-acG"/>
                             <constraint firstItem="0O3-75-7QD" firstAttribute="top" secondItem="4Lb-Qz-kOI" secondAttribute="bottom" constant="30" id="uvQ-8v-ZYZ"/>
                             <constraint firstItem="dj0-ca-CHj" firstAttribute="centerY" secondItem="0O3-75-7QD" secondAttribute="centerY" id="xxj-bj-ObX"/>
-                            <constraint firstItem="RJC-kM-Stb" firstAttribute="top" secondItem="FcG-ng-nc7" secondAttribute="top" id="yiK-ur-bzJ"/>
+                            <constraint firstItem="RJC-kM-Stb" firstAttribute="top" secondItem="FcG-ng-nc7" secondAttribute="top" constant="16" id="yiK-ur-bzJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Qj-uq-zfL"/>
                     </view>
@@ -190,44 +268,44 @@
             <objects>
                 <viewController id="jqn-rD-amg" customClass="ChannelVC" customModule="metraApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uqG-HF-O2j" customClass="GradientView" customModule="metraApp" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مترا" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVm-PS-i8b">
-                                <rect key="frame" x="16" y="44" width="28" height="24"/>
+                                <rect key="frame" x="16" y="68" width="28" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عملاء" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3g-tb-ytu">
-                                <rect key="frame" x="16" y="88" width="43" height="24"/>
+                                <rect key="frame" x="16" y="112" width="43" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gys-xN-hMB">
-                                <rect key="frame" x="281" y="89" width="22" height="22"/>
+                                <rect key="frame" x="320" y="113" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                                 <connections>
                                     <action selector="addChannelPressed:" destination="jqn-rD-amg" eventType="touchUpInside" id="xeT-nx-WLX"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ndQ-bM-W7Q" customClass="CircleImage" customModule="metraApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="576" width="75" height="75"/>
+                                <rect key="frame" x="20" y="771" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="QTg-rb-Ub5"/>
                                     <constraint firstAttribute="height" constant="75" id="cU3-Gl-VIU"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ViK-Zn-oGq">
-                                <rect key="frame" x="0.0" y="132" width="375" height="424"/>
+                                <rect key="frame" x="0.0" y="156" width="414" height="595"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="Dww-dQ-hHD" userLabel="Channel Cell" customClass="ChannelCell" customModule="metraApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dww-dQ-hHD" id="Vd5-Rz-O1P">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#عام" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qP0-Hy-cDh">
@@ -250,7 +328,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt4-m2-KUF">
-                                <rect key="frame" x="115" y="596" width="124" height="35"/>
+                                <rect key="frame" x="115" y="791" width="124" height="35"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="تسجيل الدخول">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,11 +373,11 @@
             <objects>
                 <viewController id="iVY-wr-Qi9" customClass="LoginVC" customModule="metraApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uZH-Nr-62V">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3WM-EQ-Lb3">
-                                <rect key="frame" x="141.5" y="80" width="92.5" height="40"/>
+                                <rect key="frame" x="161" y="104" width="92.5" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مترا" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGe-Eo-VK5">
                                         <rect key="frame" x="0.0" y="0.0" width="32.5" height="40"/>
@@ -317,7 +395,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="716-6U-IgI">
-                                <rect key="frame" x="106" y="330" width="163" height="32"/>
+                                <rect key="frame" x="125.5" y="354" width="163" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="ليس لديك حساب؟ سجل هنا">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -327,7 +405,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="xom-Y1-MYl">
-                                <rect key="frame" x="62.5" y="160" width="250" height="80"/>
+                                <rect key="frame" x="82" y="184" width="250" height="80"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="البريد الالكتروني" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0mj-9M-Sdy">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
@@ -366,7 +444,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqa-AQ-i5Q" customClass="RoundedButton" customModule="metraApp" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="280" width="250" height="50"/>
+                                <rect key="frame" x="82" y="304" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="KsW-Fc-p85"/>
@@ -386,7 +464,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2m-79-S8i">
-                                <rect key="frame" x="16" y="28" width="29" height="28"/>
+                                <rect key="frame" x="16" y="52" width="29" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="pEv-hi-KAw"/>
                                     <constraint firstAttribute="width" constant="29" id="r26-tl-rct"/>
@@ -397,7 +475,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DDz-Z1-JUy">
-                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="329.5" width="37" height="37"/>
                                 <color key="color" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -434,17 +512,17 @@
             <objects>
                 <viewController id="I6a-pp-Qn5" customClass="CreateAccountVC" customModule="metraApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eig-I2-sLB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إنشاء حساب جديد" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyd-Om-QJ5">
-                                <rect key="frame" x="112.5" y="60" width="150" height="24"/>
+                                <rect key="frame" x="132" y="84" width="150" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2p-Pk-g6l">
-                                <rect key="frame" x="16" y="28" width="29" height="28"/>
+                                <rect key="frame" x="16" y="52" width="29" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="YGx-GM-G49"/>
                                     <constraint firstAttribute="width" constant="29" id="b2E-AT-718"/>
@@ -456,7 +534,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9G5-aa-yoY">
-                                <rect key="frame" x="137.5" y="291" width="100" height="130"/>
+                                <rect key="frame" x="157" y="315" width="100" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="x3K-Ha-uxz"/>
                                 </constraints>
@@ -470,7 +548,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="iVH-gH-8Y1">
-                                <rect key="frame" x="62.5" y="124" width="250" height="127"/>
+                                <rect key="frame" x="82" y="148" width="250" height="127"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اسم المستخدم" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yIm-iT-JB3" userLabel="User Txt">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
@@ -526,7 +604,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSm-qF-Ahk" customClass="RoundedButton" customModule="metraApp" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="597" width="250" height="50"/>
+                                <rect key="frame" x="82" y="792" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RqH-TQ-c4Z"/>
@@ -546,14 +624,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="faJ-TC-nyT" customClass="CircleImage" customModule="metraApp" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="291" width="100" height="100"/>
+                                <rect key="frame" x="157" y="315" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="CKd-UB-qFt"/>
                                     <constraint firstAttribute="height" constant="100" id="Mxn-L9-HkR"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztr-bc-1Pb">
-                                <rect key="frame" x="120.5" y="416" width="134" height="32"/>
+                                <rect key="frame" x="140" y="440" width="134" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="اختر لون خلفية صورتك">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -564,7 +642,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6du-oQ-OVo">
-                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="329.5" width="37" height="37"/>
                                 <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -610,11 +688,11 @@
             <objects>
                 <viewController id="jiY-se-kC5" customClass="AvatarPickerVC" customModule="metraApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FuK-Wq-gHj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWo-UN-ZKx">
-                                <rect key="frame" x="16" y="28" width="30" height="30"/>
+                                <rect key="frame" x="16" y="52" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="2cM-7q-35L"/>
                                     <constraint firstAttribute="height" constant="30" id="Umg-qC-fyn"/>
@@ -625,7 +703,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kc8-Je-Hdz">
-                                <rect key="frame" x="107.5" y="28" width="160" height="29"/>
+                                <rect key="frame" x="127" y="52" width="160" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="bdZ-g8-4oF"/>
                                 </constraints>
@@ -639,7 +717,7 @@
                                 </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RCv-JC-8sI">
-                                <rect key="frame" x="0.0" y="78" width="375" height="589"/>
+                                <rect key="frame" x="0.0" y="102" width="414" height="760"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IWY-ug-0HE">
                                     <size key="itemSize" width="100" height="100"/>
@@ -699,6 +777,7 @@
     <resources>
         <image name="addChannelButton" width="22" height="22"/>
         <image name="closeButton" width="28" height="28"/>
+        <image name="location" width="30" height="30"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="metraLogo" width="1668" height="1228"/>
         <image name="profileDefault" width="192" height="192"/>
