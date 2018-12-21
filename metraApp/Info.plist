@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>You need the camera to display ARKit Content.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -47,5 +49,7 @@
 	<string>This app requires location to pull photo.</string>
 	<key>NSLocationUsageDescription</key>
 	<string>This app requires location to pull photo.</string>
+	<key>NSSiriUsageDescription</key>
+	<string>We wnat to use your voice to start your home builder.</string>
 </dict>
 </plist>

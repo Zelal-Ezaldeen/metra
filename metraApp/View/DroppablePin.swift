@@ -17,5 +17,10 @@ class DroppablePin: NSObject, MKAnnotation {
         self.coordinate = coordinate
         self.identifier = identifier
         super.init()
+        print("HeelooFrom Dropp")
+        print(coordinate)
+        print(identifier)
     }
 }
+
+

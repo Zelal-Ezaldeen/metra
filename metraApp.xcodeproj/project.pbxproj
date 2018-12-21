@@ -15,6 +15,7 @@
 		C7230AF521C3810E00A74ACB /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7230AF421C3810E00A74ACB /* DroppablePin.swift */; };
 		C72443A321C4D01400E651E4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72443A221C4D01400E651E4 /* MapKit.framework */; };
 		C72443A521C559E300E651E4 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72443A421C559E300E651E4 /* PhotoCell.swift */; };
+		C72F01F721C8D5A700EF71DA /* SceneViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F01F621C8D5A700EF71DA /* SceneViewVC.swift */; };
 		C73B8CE621B7B1E200AAAC13 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B8CE421B7B1E200AAAC13 /* ProfileVC.swift */; };
 		C73B8CE721B7B1E200AAAC13 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C73B8CE521B7B1E200AAAC13 /* ProfileVC.xib */; };
 		C73B8CEA21B8F0DC00AAAC13 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B8CE921B8F0DC00AAAC13 /* MessageService.swift */; };
@@ -25,6 +26,7 @@
 		C73B8CF621B934FD00AAAC13 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B8CF521B934FD00AAAC13 /* SocketService.swift */; };
 		C746BCBF21C61406000A51CB /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746BCBE21C61406000A51CB /* PopVC.swift */; };
 		C75555D321C220E000FA35AF /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75555D221C220E000FA35AF /* MapVC.swift */; };
+		C75748AE21C779940059566D /* SiriForMetra.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75748AD21C779940059566D /* SiriForMetra.swift */; };
 		C75ADDD021B5ACE0002E5C32 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ADDCF21B5ACE0002E5C32 /* AvatarPickerVC.swift */; };
 		C75ADDD221B5B0C2002E5C32 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ADDD121B5B0C2002E5C32 /* AvatarCell.swift */; };
 		C75ADDD421B65C85002E5C32 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ADDD321B65C85002E5C32 /* CircleImage.swift */; };
@@ -38,6 +40,7 @@
 		C7987B1621AB2E3F005D01CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7987B1521AB2E3F005D01CD /* Constants.swift */; };
 		C7987B1821ABE288005D01CD /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7987B1721ABE288005D01CD /* LoginVC.swift */; };
 		C7987B1A21ABE67D005D01CD /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7987B1921ABE67D005D01CD /* CreateAccountVC.swift */; };
+		C79D307D21CBE68D00894C67 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C79D307C21CBE68D00894C67 /* art.scnassets */; };
 		C7A61EA521AD59ED00763D63 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A61EA421AD59ED00763D63 /* AuthService.swift */; };
 		C7A61EA721ADC47500763D63 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A61EA621ADC47500763D63 /* RoundedButton.swift */; };
 		C7B0542021B3F33D0035BD32 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B0541F21B3F33D0035BD32 /* UserDataService.swift */; };
@@ -56,6 +59,7 @@
 		C7230AF421C3810E00A74ACB /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		C72443A221C4D01400E651E4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C72443A421C559E300E651E4 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		C72F01F621C8D5A700EF71DA /* SceneViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewVC.swift; sourceTree = "<group>"; };
 		C73B8CE421B7B1E200AAAC13 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		C73B8CE521B7B1E200AAAC13 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		C73B8CE921B8F0DC00AAAC13 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 		C73B8CF521B934FD00AAAC13 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		C746BCBE21C61406000A51CB /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
 		C75555D221C220E000FA35AF /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		C75748AD21C779940059566D /* SiriForMetra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriForMetra.swift; sourceTree = "<group>"; };
 		C75ADDCF21B5ACE0002E5C32 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		C75ADDD121B5B0C2002E5C32 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		C75ADDD321B65C85002E5C32 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
@@ -81,6 +86,7 @@
 		C7987B1521AB2E3F005D01CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C7987B1721ABE288005D01CD /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C7987B1921ABE67D005D01CD /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		C79D307C21CBE68D00894C67 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		C7A61EA421AD59ED00763D63 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C7A61EA621ADC47500763D63 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		C7B0541F21B3F33D0035BD32 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				C704D6CE21A9DB5B0075AA8B /* Info.plist */,
 				C7B0542121B4F8A60035BD32 /* GoogleService-Info.plist */,
 				C7987B0721AA9354005D01CD /* metraApp-Bridging-Header.h */,
+				C79D307C21CBE68D00894C67 /* art.scnassets */,
 			);
 			path = metraApp;
 			sourceTree = "<group>";
@@ -179,6 +186,8 @@
 				C73B8CF121B913D000AAAC13 /* AddChannelVC.swift */,
 				C75555D221C220E000FA35AF /* MapVC.swift */,
 				C746BCBE21C61406000A51CB /* PopVC.swift */,
+				C75748AD21C779940059566D /* SiriForMetra.swift */,
+				C72F01F621C8D5A700EF71DA /* SceneViewVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,6 +314,7 @@
 				C704D6CD21A9DB5B0075AA8B /* LaunchScreen.storyboard in Resources */,
 				C7B0542221B4F8A60035BD32 /* GoogleService-Info.plist in Resources */,
 				C73B8CF421B913D000AAAC13 /* AddChannelVC.xib in Resources */,
+				C79D307D21CBE68D00894C67 /* art.scnassets in Resources */,
 				C704D6CA21A9DB5B0075AA8B /* Assets.xcassets in Resources */,
 				C704D6C821A9DB5A0075AA8B /* Main.storyboard in Resources */,
 				C73B8CE721B7B1E200AAAC13 /* ProfileVC.xib in Resources */,
@@ -389,6 +399,7 @@
 				C75EFD4921BBDACE003507D6 /* Message.swift in Sources */,
 				C75ADDD421B65C85002E5C32 /* CircleImage.swift in Sources */,
 				C73B8CEA21B8F0DC00AAAC13 /* MessageService.swift in Sources */,
+				C75748AE21C779940059566D /* SiriForMetra.swift in Sources */,
 				C7987B0F21AA9B0A005D01CD /* ChatVC.swift in Sources */,
 				C7B0542021B3F33D0035BD32 /* UserDataService.swift in Sources */,
 				C75555D321C220E000FA35AF /* MapVC.swift in Sources */,
@@ -401,6 +412,7 @@
 				C704D6C321A9DB5A0075AA8B /* AppDelegate.swift in Sources */,
 				C75ADDD221B5B0C2002E5C32 /* AvatarCell.swift in Sources */,
 				C7987B0A21AA9354005D01CD /* SWRevealViewController.m in Sources */,
+				C72F01F721C8D5A700EF71DA /* SceneViewVC.swift in Sources */,
 				C746BCBF21C61406000A51CB /* PopVC.swift in Sources */,
 				C7987B1621AB2E3F005D01CD /* Constants.swift in Sources */,
 				C7987B1821ABE288005D01CD /* LoginVC.swift in Sources */,

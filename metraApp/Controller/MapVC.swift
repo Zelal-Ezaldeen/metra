@@ -51,13 +51,27 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         pullUpView.addSubview(collectionView!)
     }
     
+//    func addDoubleTap() {
+//        print("hiiiiii")
+//        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin(sender:)))
+//        doubleTap.numberOfTapsRequired = 2
+//        doubleTap.delegate = self
+//        mapView.addGestureRecognizer(doubleTap)
+//
+//
+//    }
     func addDoubleTap() {
-        print("hiiiiii")
-        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin(sender:)))
-        doubleTap.numberOfTapsRequired = 2
-        doubleTap.delegate = self
-        mapView.addGestureRecognizer(doubleTap)
-    }
+                print("hiiiiii")
+                let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin(sender:)))
+     
+                doubleTap.numberOfTapsRequired = 2
+                doubleTap.delegate = self
+                mapView.addGestureRecognizer(doubleTap)
+        
+            }
+    
+  
+   
     
     func addSwipe() {
         let swipe = UISwipeGestureRecognizer(target: self, action: #selector(animateViewDown))
@@ -122,23 +136,31 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
 extension MapVC: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
+            print("NILLLL")
             return nil
+           
         }
-        
+     
         let pinAnnotation = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "droppablePin")
         pinAnnotation.pinTintColor = #colorLiteral(red: 0.3631127477, green: 0.4045833051, blue: 0.8775706887, alpha: 1)
         pinAnnotation.animatesDrop = true
+          print("HElloooooPin")
         return pinAnnotation
+      
+        
+        
     }
     
     func centerMapOnUserLocation() {
         guard let coordinate = locationManager.location?.coordinate else { return }
-//        let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+
         let coordinateRegion = MKCoordinateRegion.init(center: coordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
+    
     @objc func dropPin(sender: UITapGestureRecognizer) {
+        print("Hello dropbin")
         removePin()
         removeSpinner()
         removeProgressLbl()
@@ -155,14 +177,15 @@ extension MapVC: MKMapViewDelegate {
         addProgressLbl()
         
         let touchPoint = sender.location(in: mapView)
+        
         let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
         
         let annotation = DroppablePin(coordinate: touchCoordinate, identifier: "droppablePin")
         mapView.addAnnotation(annotation)
         
-//        let coordinateRegion = MKCoordinateRegion(center: touchCoordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
-         let coordinateRegion = MKCoordinateRegion.init(center: touchCoordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+        let coordinateRegion = MKCoordinateRegion.init(center: touchCoordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
+        
         
         retrieveUrls(forAnnotation: annotation) { (finished) in
             if finished {
@@ -176,6 +199,7 @@ extension MapVC: MKMapViewDelegate {
             }
         }
     }
+    
     
     func removePin() {
         for annotation in mapView.annotations {
@@ -232,6 +256,7 @@ extension MapVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         centerMapOnUserLocation()
+        
     }
 }
 
