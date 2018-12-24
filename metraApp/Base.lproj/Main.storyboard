@@ -915,11 +915,12 @@
                             </arscnView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I91-Y6-Waf">
                                 <rect key="frame" x="20" y="776" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="UKO-K6-DfC"/>
                                     <constraint firstAttribute="width" constant="100" id="VUR-hi-iFu"/>
                                 </constraints>
-                                <state key="normal" image="Play"/>
+                                <state key="normal" title="واجهة المنزل"/>
                                 <connections>
                                     <action selector="playBtnPressed:" destination="jPU-15-Oub" eventType="touchUpInside" id="Bnn-OO-tjm"/>
                                 </connections>
@@ -935,14 +936,22 @@
                                     <action selector="resetBtnPressed:" destination="jPU-15-Oub" eventType="touchUpInside" id="cm2-ce-KHB"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تم التعرف على الموقع" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGo-aP-fXm">
+                                <rect key="frame" x="102" y="44" width="210.5" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7S1-Gu-d0t" firstAttribute="trailing" secondItem="Mb3-aS-vf3" secondAttribute="trailing" constant="20" id="0Bc-kz-pbW"/>
                             <constraint firstAttribute="bottom" secondItem="Mb3-aS-vf3" secondAttribute="bottom" constant="20" id="6xg-7z-egY"/>
                             <constraint firstAttribute="bottom" secondItem="TQR-h8-XIP" secondAttribute="bottom" id="8aC-AX-7vT"/>
+                            <constraint firstItem="wGo-aP-fXm" firstAttribute="centerX" secondItem="4Bx-84-5IX" secondAttribute="centerX" id="8d4-9v-drQ"/>
                             <constraint firstItem="TQR-h8-XIP" firstAttribute="trailing" secondItem="7S1-Gu-d0t" secondAttribute="trailing" id="Ebd-KH-vNh"/>
                             <constraint firstItem="I91-Y6-Waf" firstAttribute="leading" secondItem="7S1-Gu-d0t" secondAttribute="leading" constant="20" id="J5d-0l-euh"/>
+                            <constraint firstItem="wGo-aP-fXm" firstAttribute="top" secondItem="7S1-Gu-d0t" secondAttribute="top" id="Ogf-PC-mCC"/>
                             <constraint firstItem="TQR-h8-XIP" firstAttribute="top" secondItem="4Bx-84-5IX" secondAttribute="top" id="XuQ-j8-XhI"/>
                             <constraint firstAttribute="bottom" secondItem="I91-Y6-Waf" secondAttribute="bottom" constant="20" id="fp6-rs-Hqg"/>
                             <constraint firstItem="TQR-h8-XIP" firstAttribute="leading" secondItem="7S1-Gu-d0t" secondAttribute="leading" id="xWr-ub-ZFa"/>
@@ -950,6 +959,7 @@
                         <viewLayoutGuide key="safeArea" id="7S1-Gu-d0t"/>
                     </view>
                     <connections>
+                        <outlet property="planeDetected" destination="wGo-aP-fXm" id="pY0-lR-HTW"/>
                         <outlet property="playBtn" destination="I91-Y6-Waf" id="cRc-2P-fPv"/>
                         <outlet property="sceneView" destination="TQR-h8-XIP" id="8kd-8d-A88"/>
                     </connections>
@@ -960,7 +970,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Play" width="102" height="102"/>
         <image name="Reset" width="102" height="102"/>
         <image name="addChannelButton" width="22" height="22"/>
         <image name="closeButton" width="28" height="28"/>

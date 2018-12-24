@@ -12,6 +12,7 @@
 		C704D6C821A9DB5A0075AA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C704D6C621A9DB5A0075AA8B /* Main.storyboard */; };
 		C704D6CA21A9DB5B0075AA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C704D6C921A9DB5B0075AA8B /* Assets.xcassets */; };
 		C704D6CD21A9DB5B0075AA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C704D6CB21A9DB5B0075AA8B /* LaunchScreen.storyboard */; };
+		C71E7B0F21D0C9F0004E80A1 /* Villa.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71E7B0E21D0C9F0004E80A1 /* Villa.swift */; };
 		C7230AF521C3810E00A74ACB /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7230AF421C3810E00A74ACB /* DroppablePin.swift */; };
 		C72443A321C4D01400E651E4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72443A221C4D01400E651E4 /* MapKit.framework */; };
 		C72443A521C559E300E651E4 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72443A421C559E300E651E4 /* PhotoCell.swift */; };
@@ -56,6 +57,7 @@
 		C704D6C921A9DB5B0075AA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C704D6CC21A9DB5B0075AA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C704D6CE21A9DB5B0075AA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C71E7B0E21D0C9F0004E80A1 /* Villa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Villa.swift; path = metraApp/Villa.swift; sourceTree = SOURCE_ROOT; };
 		C7230AF421C3810E00A74ACB /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		C72443A221C4D01400E651E4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C72443A421C559E300E651E4 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				C73B8CEB21B8F12000AAAC13 /* Channel.swift */,
 				C75EFD4821BBDACE003507D6 /* Message.swift */,
+				C71E7B0E21D0C9F0004E80A1 /* Villa.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				C75555D321C220E000FA35AF /* MapVC.swift in Sources */,
 				C7987B1A21ABE67D005D01CD /* CreateAccountVC.swift in Sources */,
 				C7A61EA521AD59ED00763D63 /* AuthService.swift in Sources */,
+				C71E7B0F21D0C9F0004E80A1 /* Villa.swift in Sources */,
 				C73B8CEC21B8F12000AAAC13 /* Channel.swift in Sources */,
 				C7230AF521C3810E00A74ACB /* DroppablePin.swift in Sources */,
 				C7987B1321AAA16B005D01CD /* GradientView.swift in Sources */,
